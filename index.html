@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Dahira</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white">
+
+    <!-- Bismillah -->
+    <div id="app">
+
+ <div id="page-connexion" class="page grid grid-cols-1 md:grid-cols-2 h-screen overflow-hidden">
+
+    <div id="connexion-gauche" class="hidden md:block relative overflow-hidden">
+        <!-- <h1 class="absolute top-8 left-8 z-10 text-white text-2xl font-bold">
+            Gerez votre dahira
+        </h1> -->
+        <!-- <img src="images/jumaaji.png" alt="Mosquee" class="w-full h-full"> -->
+    </div>
+
+    <div id="connexion-droite" class="flex items-center justify-center bg-white col-span-1">
+        <div id="connexion-contenu" class="w-full max-w-lg flex flex-col gap-6 px-16 md:px-20">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-2">Connexion</h2>
+                <p class="text-sm italic">Accedez a la gestion de votre dahira</p>
+            </div>
+
+            <div id="connexion-formulaire" class="flex flex-col gap-5">
+
+                <div id="connexion-champ-email" class="flex flex-col gap-1">
+                    <label class="text-sm font-medium">Adresse email</label>
+                    <input type="email" placeholder="mail@gmail.com" class="w-full px-4 py-3 text-sm">
+                </div>
+
+                <div id="connexion-champ-mdp" class="flex flex-col gap-1">
+                    <label class="text-sm font-medium">Mot de passe</label>
+                    <input type="password" placeholder="*********" class="w-full px-4 py-3 text-sm">
+                </div>
+
+                <p id="connexion-erreur"></p>
+
+                <button id="connexion-bouton" class="w-full py-3.5 text-white text-sm font-semibold rounded-lg">
+                    Se connecter
+                </button>
+
+                <p id="connexion-lien-inscription" class="text-center text-sm">
+                    Vous n'avez pas de compte ?
+                    <a href="">S'inscrire</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+ <div id="page-inscription" class="page cache grid grid-cols-1 md:grid-cols-2 h-screen overflow-hidden">
+
+    <div id="inscription-gauche" class="hidden md:block relative overflow-hidden">
+    </div>
+
+    <div id="inscription-droite" class="flex items-center justify-center bg-white overflow-y-auto">
+        <div id="inscription-contenu" class="w-full max-w-lg flex flex-col gap-6 px-16 md:px-20 py-10">
+
+            <div class="text-center">
+                <!-- <h2 class="text-3xl font-bold mb-2">Creer votre dahira</h2> -->
+                <p class="text-sm italic">Configurez votre espace de gestion</p>
+            </div>
+
+            <div id="inscription-formulaire" class="flex flex-col gap-4">
+
+                <p class="text-xs font-semibold uppercase tracking-widest">Votre dahira</p>
+
+                <div id="inscription-champ-nom-dahira" class="flex flex-col gap-1">
+                    <label class="text-sm font-medium">Nom de la dahira</label>
+                    <input type="text" placeholder="Ex: Mawaahibu Naafih Touba ODC" class="w-full px-4 py-3 text-sm">
+                </div>
+
+                <div id="inscription-champ-ville" class="flex flex-col gap-1">
+                    <label class="text-sm font-medium">Adress</label>
+                    <input type="text" placeholder="Ex: Touba" class="w-full px-4 py-3 text-sm">
+                </div>
+
+                <p class="text-xs font-semibold uppercase tracking-widest mt-2">Votre compte</p>
+
+                <div class="flex gap-4">
+                    <div id="inscription-champ-prenom" class="flex flex-col gap-1 w-1/2">
+                        <label class="text-sm font-medium">Prenom</label>
+                        <input type="text" placeholder="Votre prenom" class="w-full px-4 py-3 text-sm">
+                    </div>
+                    <div id="inscription-champ-nom" class="flex flex-col gap-1 w-1/2">
+                        <label class="text-sm font-medium">Nom</label>
+                        <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 text-sm">
+                    </div>
+                </div>
+                    <div id="inscription-champ-email" class="flex flex-col gap-1">
+                        <label class="text-sm font-medium">Email</label>
+                        <input type="email" placeholder="votre@email.com" class="w-full px-4 py-3 text-sm">
+                    </div>
+
+                    <div id="inscription-champ-mdp" class="flex flex-col gap-1">
+                        <label class="text-sm font-medium">Mot de passe</label>
+                        <input type="password" placeholder="*******" class="w-full px-4 py-3 text-sm">
+                    </div>
+
+                <div id="inscription-champ-confirmer-mdp" class="flex flex-col gap-1">
+                    <label class="text-sm font-medium">Confirmer le mot de passe</label>
+                    <input type="password" placeholder="*******" class="w-full px-4 py-3 text-sm">
+                </div>
+
+                <p id="inscription-erreur"></p>
+
+                <button id="inscription-bouton" class="w-full py-3.5 text-white text-sm font-semibold rounded-lg">
+                    Creer ma dahira
+                </button>
+
+                <p id="inscription-lien-connexion" class="text-center text-sm">
+                    Deja inscrit ?
+                    <a href="#">Se connecter</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+        <div id="dashboard-dieuwrigne" class="page cache min-h-screen bg-[#F8F9FA] flex">
+            <aside class="w-64 bg-[#142E1B] text-white flex flex-col justify-between p-6 shrink-0">
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center gap-3 border-b border-emerald-800/50 pb-5">
+                        <div class="w-10 h-10 bg-[#C5A880]/20 rounded-xl flex items-center justify-center text-[#C5A880]">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm tracking-wide">Touba ODC</h3>
+                            <p class="text-xs text-emerald-400/80">Gestion communautaire</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="flex flex-col gap-4 border-t border-emerald-800/50 pt-4">
+                    <a href="#" id="bouton-deconnexion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-emerald-300 hover:text-white transition-all">
+                        <span>Se déconnecter</span>
+                    </a>
+                   
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="donnes.json"></script>
+    <script src="storages.js"></script>
+</body>
+
+</html>

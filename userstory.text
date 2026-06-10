@@ -1,0 +1,4 @@
+localStorage.setItem('clé', 'valeur')   // sauvegarder
+localStorage.getItem('clé')             // c pour lire 
+localStorage.removeItem('clé')          // c pour supprimer une clé
+localStorage.clear()                    // tout effacer 
