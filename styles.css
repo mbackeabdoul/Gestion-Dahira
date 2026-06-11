@@ -114,3 +114,87 @@
     padding-bottom: 6px;
     font-size: 11px;
 }
+
+/* ── Sidebar ── */
+#dashboard-sidebar {
+    background-color: #1a2e1a;
+    border-right: none;
+}
+
+#dashboard-sidebar .nav-lien {
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+#dashboard-sidebar .nav-lien:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+#dashboard-sidebar .nav-lien.bg-gray-100 {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: white !important;
+}
+
+#dashboard-sidebar .nav-lien p {
+    color: inherit;
+}
+
+#dashboard-sidebar .nav-lien .text-gray-400 {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#dashboard-nom-dahira {
+    color: white;
+    font-size: 13px;
+}
+
+#dashboard-sidebar .text-gray-400 {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#dashboard-sidebar .border-gray-100 {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#bouton-deconnexion {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#bouton-deconnexion:hover {
+    color: white !important;
+}
+
+#dashboard-sidebar .text-gray-300 {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#dashboard-header {
+    background-color: white;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#dashboard-titre-page {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#dashboard-nom-dieuwrigne {
+    color: var(--texte-gris);
+    font-size: 13px;
+}
+
+#dashboard-contenu {
+    background-color: #f8f9f8;
+}
+
+#accueil-dashboard .shadow-sm {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+}
+
+#dashboard-sidebar .w-9 {
+    background-color: var(--vert) !important;
+}
