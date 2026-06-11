@@ -115,7 +115,6 @@
     font-size: 11px;
 }
 
-/* ── Sidebar ── */
 #dashboard-sidebar {
     background-color: #1a2e1a;
     border-right: none;
@@ -194,7 +193,27 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     border: 1px solid #f0f0f0;
 }
+#dashboard-sidebar * {
+    color: rgba(255, 255, 255, 0.6);
+}
 
-#dashboard-sidebar .w-9 {
-    background-color: var(--vert) !important;
+#dashboard-sidebar .nav-lien:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white !important;
+}
+
+#dashboard-sidebar .nav-lien:hover * {
+    color: white !important;
+}
+
+#dashboard-sidebar .nav-lien.bg-gray-100 {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#dashboard-sidebar .nav-lien.bg-gray-100 * {
+    color: white !important;
+}
+
+#dashboard-nom-dahira {
+    color: white !important;
 }

@@ -41,7 +41,7 @@ const rendreConnexion = () => `
     </div>
 `
 
-const initConnexion = () => {
+function initConnexion (){
 
     document.querySelector('#connexion-lien-inscription a')
         .addEventListener('click', e => {
@@ -54,14 +54,13 @@ const initConnexion = () => {
             const email = document.querySelector('#connexion-champ-email input').value.trim()
             const modpasse = document.querySelector('#connexion-champ-mdp input').value
             const erreur = document.getElementById('connexion-erreur')
-
             if (!email || !modpasse) {
-                erreur.textContent = 'Veuillez remplir tous les champs'
+                erreur.textContent = 'Veuillez remplir toutes les champs'
                 return
-            }
+            } 
+            
 
             const dieuwrigne = getDieuwrigne()
-
             if (dieuwrigne && email === dieuwrigne.email && modpasse === dieuwrigne.modpasse) {
                 creerSession(dieuwrigne)
                 erreur.textContent = ''

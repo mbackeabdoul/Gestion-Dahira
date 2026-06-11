@@ -70,7 +70,7 @@ const rendreInscription = () => `
     </div>
 `
 
-const initInscription = () => {
+function initInscription () {
 
     document.querySelector('#inscription-lien-connexion a')
         .addEventListener('click', e => {
@@ -88,17 +88,14 @@ const initInscription = () => {
             const modpasse = document.querySelector('#inscription-champ-mdp input').value
             const modpasseConfirm = document.querySelector('#inscription-champ-confirmer-mdp input').value
             const erreur = document.getElementById('inscription-erreur')
-
             if (!prenom || !nom || !email || !nomDahira || !ville || !modpasse) {
                 erreur.textContent = 'Veuillez remplir tous les champs'
                 return
             }
-
             if (modpasse !== modpasseConfirm) {
                 erreur.textContent = 'Les mots de passe ne sont pas identiques'
                 return
             }
-
             setDieuwrigne({ prenom, nom, email, modpasse, nomDahira, ville })
             erreur.textContent = ''
             afficherPage('page-connexion')

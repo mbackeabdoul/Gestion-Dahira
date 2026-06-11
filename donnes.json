@@ -1,5 +1,12 @@
 {
-    "dieuwrigne": null,
+    "dieuwrigne": {
+        "prenom": "Abdoul",
+        "nom": "Mbacke",
+        "email": "mbackee@gmail.com",
+        "modpasse": "1234",
+        "nomDahira": "Mawaahibu Naafih Touba ODC",
+        "ville": "Touba"
+    },
     "dahira": null,
     "membres": []
-}
+}                                                                                                                                                               

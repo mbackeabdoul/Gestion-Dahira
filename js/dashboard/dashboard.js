@@ -1,7 +1,7 @@
 const rendreDashboard = () => `
-    <div id="dashboard-dieuwrigne" class="page cache flex h-screen overflow-hidden bg-gray-50">
+    <div id="dashboard-dieuwrigne" class="page cache flex h-screen overflow-hidden">
 
-        <aside id="dashboard-sidebar" class="w-56 bg-white border-r border-gray-100 flex flex-col justify-between py-6 shrink-0 h-full">
+        <aside id="dashboard-sidebar" class="flex flex-col justify-between py-6 shrink-0 h-full" style="width:224px; min-width:224px;">
 
             <div class="flex flex-col gap-6">
 
@@ -17,42 +17,48 @@ const rendreDashboard = () => `
 
                 <nav class="flex flex-col gap-1 px-3">
 
-                    <a href="#" id="nav-accueil" class="nav-lien flex items-center justify-between px-4 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-all">
+                    <a href="#" id="nav-accueil" class="nav-lien flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all">
+                        <i class="fa-solid fa-table-cells-large w-4 text-center shrink-0"></i>
                         <span>Tableau de bord</span>
                     </a>
 
-                    <a href="#" id="nav-membres" class="nav-lien flex items-center px-4 py-2.5 rounded-lg text-sm transition-all">
+                    <a href="#" id="nav-membres" class="nav-lien flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all">
+                        <i class="fa-solid fa-users w-4 text-center shrink-0"></i>
                         <div>
-                            <p class="text-gray-700 font-medium">Membres</p>
-                            <p class="text-xs text-gray-400">Repertoire</p>
+                            <p class="font-medium">Membres</p>
+                            <p class="text-xs opacity-60">Répertoire</p>
                         </div>
                     </a>
 
-                    <a href="#" id="nav-sass" class="nav-lien flex items-center px-4 py-2.5 rounded-lg text-sm transition-all">
+                    <a href="#" id="nav-sass" class="nav-lien flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all">
+                        <i class="fa-solid fa-credit-card w-4 text-center shrink-0"></i>
                         <div>
-                            <p class="text-gray-700 font-medium">Cotisations</p>
-                            <p class="text-xs text-gray-400">Paiements</p>
+                            <p class="font-medium">Cotisations</p>
+                            <p class="text-xs opacity-60">Paiements</p>
                         </div>
                     </a>
 
-                    <a href="#" id="nav-caisse" class="nav-lien flex items-center px-4 py-2.5 rounded-lg text-sm transition-all">
+                    <a href="#" id="nav-caisse" class="nav-lien flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all">
+                        <i class="fa-solid fa-wallet w-4 text-center shrink-0"></i>
                         <div>
-                            <p class="text-gray-700 font-medium">Caisse</p>
-                            <p class="text-xs text-gray-400">Finances</p>
+                            <p class="font-medium">Caisse</p>
+                            <p class="text-xs opacity-60">Finances</p>
                         </div>
                     </a>
 
-                    <a href="#" id="nav-evenements" class="nav-lien flex items-center px-4 py-2.5 rounded-lg text-sm transition-all">
+                    <a href="#" id="nav-evenements" class="nav-lien flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all">
+                        <i class="fa-solid fa-calendar-days w-4 text-center shrink-0"></i>
                         <div>
-                            <p class="text-gray-700 font-medium">Evenements</p>
-                            <p class="text-xs text-gray-400">Calendrier</p>
+                            <p class="font-medium">Événements</p>
+                            <p class="text-xs opacity-60">Calendrier</p>
                         </div>
                     </a>
 
-                    <a href="#" id="nav-apprentissage" class="nav-lien flex items-center px-4 py-2.5 rounded-lg text-sm transition-all">
+                    <a href="#" id="nav-apprentissage" class="nav-lien flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all">
+                        <i class="fa-solid fa-book-open w-4 text-center shrink-0"></i>
                         <div>
-                            <p class="text-gray-700 font-medium">Apprentissage</p>
-                            <p class="text-xs text-gray-400">Coran et Religion</p>
+                            <p class="font-medium">Apprentissage</p>
+                            <p class="text-xs opacity-60">Coran et Religion</p>
                         </div>
                     </a>
 
@@ -60,51 +66,52 @@ const rendreDashboard = () => `
             </div>
 
             <div class="px-3 flex flex-col gap-4 border-t border-gray-100 pt-4">
-                <a href="#" id="bouton-deconnexion" class="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-400 hover:text-gray-700 transition-all">
-                    Se deconnecter
+                <a href="#" id="bouton-deconnexion" class="flex items-center gap-2 px-4 py-2.5 text-sm transition-all">
+                    <i class="fa-solid fa-right-from-bracket w-4 text-center shrink-0"></i>
+                    Se déconnecter
                 </a>
-                <p class="text-xs text-gray-300 px-4 italic">Servir la communaute, c est servir Dieu</p>
+                <p class="text-xs px-4 italic" style="color: rgba(255,255,255,0.2)">Servir la communauté, c'est servir Dieu</p>
             </div>
 
         </aside>
 
-        <div class="flex-1 flex flex-col overflow-hidden">
+        <div class="flex flex-col overflow-hidden" style="flex:1; min-width:0;">
 
             <header id="dashboard-header" class="bg-white border-b border-gray-100 px-8 py-4 flex items-center justify-between shrink-0">
                 <h2 id="dashboard-titre-page" class="text-sm font-semibold text-gray-600">Tableau de bord</h2>
                 <span id="dashboard-nom-dieuwrigne" class="text-sm text-gray-500"></span>
             </header>
 
-            <main id="dashboard-contenu" class="flex-1 overflow-y-auto p-8">
+            <main id="dashboard-contenu" class="overflow-y-auto" style="flex:1; background:#f8f9f8;">
             </main>
 
         </div>
 
     </div>
 `
-
-const afficherContenu = (html) => {
+function afficherContenu(html) {
     document.getElementById('dashboard-contenu').innerHTML = html
 }
 
-const activerNav = (idActif) => {
-    document.querySelectorAll('.nav-lien').forEach(lien => {
+function activerNav(idActif) {
+    const tousLesLiens = document.querySelectorAll('.nav-lien')
+    tousLesLiens.forEach(function(lien) {
         lien.classList.remove('bg-gray-100', 'font-semibold')
     })
     document.getElementById(idActif).classList.add('bg-gray-100', 'font-semibold')
 }
 
-const initDashboard = () => {
+function initDashboard() {
 
     document.getElementById('bouton-deconnexion')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             supprimerSession()
             afficherPage('page-connexion')
         })
 
     document.getElementById('nav-accueil')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             activerNav('nav-accueil')
             document.getElementById('dashboard-titre-page').textContent = 'Tableau de bord'
@@ -112,7 +119,7 @@ const initDashboard = () => {
         })
 
     document.getElementById('nav-membres')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             activerNav('nav-membres')
             document.getElementById('dashboard-titre-page').textContent = 'Membres'
@@ -121,7 +128,7 @@ const initDashboard = () => {
         })
 
     document.getElementById('nav-sass')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             activerNav('nav-sass')
             document.getElementById('dashboard-titre-page').textContent = 'Cotisations'
@@ -130,7 +137,7 @@ const initDashboard = () => {
         })
 
     document.getElementById('nav-caisse')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             activerNav('nav-caisse')
             document.getElementById('dashboard-titre-page').textContent = 'Caisse'
@@ -139,7 +146,7 @@ const initDashboard = () => {
         })
 
     document.getElementById('nav-evenements')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             activerNav('nav-evenements')
             document.getElementById('dashboard-titre-page').textContent = 'Evenements'
@@ -148,7 +155,7 @@ const initDashboard = () => {
         })
 
     document.getElementById('nav-apprentissage')
-        .addEventListener('click', e => {
+        .addEventListener('click', function(e) {
             e.preventDefault()
             activerNav('nav-apprentissage')
             document.getElementById('dashboard-titre-page').textContent = 'Apprentissage'
@@ -157,11 +164,14 @@ const initDashboard = () => {
         })
 }
 
-const afficherDashboard = () => {
+function afficherDashboard() {
     const dieuwrigne = getDieuwrigne()
     if (dieuwrigne) {
         document.getElementById('dashboard-nom-dahira').textContent = dieuwrigne.nomDahira
         document.getElementById('dashboard-nom-dieuwrigne').textContent = dieuwrigne.prenom + ' ' + dieuwrigne.nom
         activerNav('nav-accueil')
+        afficherContenu(rendreAccueil())
     }
 }
+
+

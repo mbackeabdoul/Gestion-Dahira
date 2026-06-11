@@ -1,25 +1,51 @@
 const CLE = 'dahira_data'
 
-const lire = () => JSON.parse(localStorage.getItem(CLE))
+function lire() {
+    const texte = localStorage.getItem(CLE)
+    const donnees = JSON.parse(texte)
+    return donnees
+}
 
-const ecrire = (donnee) => localStorage.setItem(CLE, JSON.stringify(donnee))
+function ecrire(donnees) {
+    const texte = JSON.stringify(donnees)
+    localStorage.setItem(CLE, texte)
+}
 
-const initialiser = (data) => {
-    if (!lire()) {
+function initialiser(data) {
+    const donnees = lire()
+    if (donnees === null) {
         ecrire(data)
     }
 }
 
-const getDieuwrigne = () => lire()?.dieuwrigne
-
-const setDieuwrigne = (dieuwrigne) => {
-    const donnee = lire() || { dieuwrigne: null, dahira: null, membres: [] }
-    donnee.dieuwrigne = dieuwrigne
-    ecrire(donnee)
+function getDieuwrigne() {
+    const donnees = lire()
+    if (donnees === null) {
+        return null
+    }
+    return donnees.dieuwrigne
 }
 
-const creerSession = (dieuwrigne) => sessionStorage.setItem('session', JSON.stringify(dieuwrigne))
+function setDieuwrigne(dieuwrigne) {
+    const donnees = lire()
+    if (donnees === null) {
+        return
+    }
+    donnees.dieuwrigne = dieuwrigne
+    ecrire(donnees)
+}
 
-const getSession = () => JSON.parse(sessionStorage.getItem('session'))
+function creerSession(dieuwrigne) {
+    const texte = JSON.stringify(dieuwrigne)
+    sessionStorage.setItem('session', texte)
+}
 
-const supprimerSession = () => sessionStorage.removeItem('session')
+function getSession() {
+    const texte = sessionStorage.getItem('session')
+    const session = JSON.parse(texte)
+    return session
+}
+
+function supprimerSession() {
+    sessionStorage.removeItem('session')
+}

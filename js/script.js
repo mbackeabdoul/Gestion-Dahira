@@ -4,7 +4,7 @@ const afficherPage = (idPage) => {
     document.getElementById(idPage).classList.remove('cache')
 }
 
-fetch('../donnes.json')
+fetch('donnes.json')
     .then(reponse => reponse.json())
     .then(data => {
 
@@ -14,7 +14,6 @@ fetch('../donnes.json')
             ${rendreConnexion()}
             ${rendreInscription()}
             ${rendreDashboard()}
-
         `
 
         initConnexion()
